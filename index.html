@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>New Iris Layout</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/index.css">
+
+  </head>
+  <body>
+    <div class="page-container">
+
+      <!-- This is where you see the actual iris and basic descriptions of rays -->
+      <div id="iris">
+        <div class="iris-overhead">
+          <h3 class="text-center">Workforce Genome 2.0</h3>
+        </div>
+        <div class="">
+          <h2>Hi Gabe Gloege!</h2>
+        </div>
+        <div class="center-block">
+          <img class="center-block" src="images/iris.png" alt="Iris goes here">
+        </div>
+      </div>
+
+      <!-- This is the window that houses objects -->
+      <div class="" id="window">
+        <div class="object-types">
+          <div class="object-types-list">
+            <div class="object-list-type">Reflections</div>
+            <div class="object-list-type">Commits</div>
+            <div class="object-list-type active-object-list">Activities</div>
+            <div class="object-list-type">Resources</div>
+            <!-- <span class="object-list-type">Evidence</span> -->
+          </div>
+        </div>
+        <div class="search-bar">
+          <input type="text" name="search" value="" placeholder="Search your activities" style="width: 100%" class="form-control">
+        </div>
+        <div class="object-list">
+          <div class="object object-active">
+            <h4>Object title</h4>
+            <p>This is the description of an object. This is the description of an object. This is the description of an object. This is the description of an object. This is the description of an object. This is the description of an object.</p>
+            <button type="button" class="btn btn-primary pull-right" name="button">Align</button>
+            <button type="button" class="btn btn-default pull-right" name="button">
+              <span class="glyphicon glyphicon-trash"></span>
+            </button>
+          </div>
+          <div class="object">
+            <h4>Object title</h4>
+            <p>This is the description of an object. This is the description of an object. This is the description of an object. This is the description of an object. This is the description of an object. This is the description of an object.</p>
+          </div>
+          <div class="object">
+            <h4>Object title</h4>
+            <p>This is the description of an object. This is the description of an object. This is the description of an object. This is the description of an object. This is the description of an object. This is the description of an object.</p>
+          </div>
+          <div class="object">
+            <h4>Object title</h4>
+            <p>This is the description of an object. This is the description of an object. This is the description of an object. This is the description of an object. This is the description of an object. This is the description of an object.</p>
+          </div>
+          <div class="object">
+            <h4>Object title</h4>
+            <p>This is the description of an object. This is the description of an object. This is the description of an object. This is the description of an object. This is the description of an object. This is the description of an object.</p>
+          </div>
+          <div class="object">
+            <h4>Object title</h4>
+            <p>This is the description of an object. This is the description of an object. This is the description of an object. This is the description of an object. This is the description of an object. This is the description of an object.</p>
+          </div>
+          <div class="object">
+            <h4>Object title</h4>
+            <p>This is the description of an object. This is the description of an object. This is the description of an object. This is the description of an object. This is the description of an object. This is the description of an object.</p>
+          </div>
+          <div class="object">
+            <h4>Object title</h4>
+            <p>This is the description of an object. This is the description of an object. This is the description of an object. This is the description of an object. This is the description of an object. This is the description of an object.</p>
+          </div>
+
+
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+      $('#myTabs a').click(function (e) {
+        e.preventDefault()
+        $(this).tab('show')
+      })
+    </script>
+  </body>
+</html>

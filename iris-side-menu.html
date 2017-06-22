@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>New Iris Layout</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <!-- My styles -->
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+  <div class="main-container">
+
+    <div class="iris">
+      <div class="iris-display" id="iris-display">
+        <h4>Ability name</h4>
+        <p>Ability description goes here</p>
+      </div>
+      <div class="window-switch">
+        <a href="#" onclick=toggleWindow()><img src="images/window-switch.png" alt=""></a>
+      </div>
+
+      <div class="iris-image">
+        <img src="images/iris.png" alt="Iris goes here">
+      </div>
+      <div class="iris-picker">
+        <p>You're viewing the iris for: <span>
+          <select class="dropdown" name="iris-picker">
+            <option value="">Workforce Genome</option>
+            <option value="">Account Executive</option>
+            <option value="">Account Services Team</option>
+          </select>
+        </span></p>
+      </div>
+    </div>
+
+    <div id="window">
+      <h4>Your Learning Feed</h4>
+      <div class="filter-wrapper">
+        <div class="filter">
+          <div class="dropdown">
+            <button class="btn btn-primary btn-sm dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              Type
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><a href="#">All objects</a></li>
+              <li><a href="#">Commits</a></li>
+              <li><a href="#">Reflections</a></li>
+              <li><a href="#">Resources</a></li>
+              <li><a href="#">Iris adjustments</a></li>
+              <li><a href="#">Highlights</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="filter">
+          <div class="dropdown">
+            <button class="btn btn-default btn-sm dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              Time
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><a href="#">All time</a></li>
+              <li><a href="#">Last 7 days</a></li>
+              <li><a href="#">Last 30 days</a></li>
+              <li><a href="#">Last 90 days</a></li>
+              <li><a href="#">Last 6 months</a></li>
+              <li><a href="#">Last 12 months</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="filter">
+          <div class="dropdown">
+            <button class="btn btn-default btn-sm dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              Team
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+              <li><a href="#">Just me</a></li>
+              <li><a href="#">My team</a></li>
+              <li><a href="#">My department</a></li>
+              <li><a href="#">My company</a></li>
+            </ul>
+          </div>
+        </div>
+        <button type="button" class="btn btn-default btn-sm" aria-label="Search" style="width: 40px">
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+        </button>
+      </div>
+
+      <!-- Search the learning feed -->
+      <div class="object-search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search your learning feed">
+        </div>
+      </div>
+
+      <!-- Begin actual learning feed -->
+      <div class="object-list">
+
+        <!-- This is another object in the learning feed -->
+        <div class="learning-object">
+          <div class="timestamp">
+            Monday, June 19, 2017
+          </div>
+          <div class="panel panel-default object-active">
+            <div class="panel-body">
+              <div class="object-content-wrapper">
+                <div class="object-icon">
+                  <span class="glyphicon glyphicon-eye-open"></span>
+                </div>
+                <div class="object-text">
+                  <p>The last two days have been difficult in trying to get candidates on the phone or to respond to emails. I have aslo felt like I was driving in a never ending circle when searching for candidates on compass. After driving myself a little crazy, Fergal gave me some advice and scheduled some time to review my sourcing strategies tomorrow. I need to be more resourceful, I have a wealth of knowledge and experience surrounding me in the office, so I'll be sure not hesitate to ask questions when I need help.</p>
+                </div>
+              </div>
+              <div class="button-row">
+                <button type="button" name="button" class="btn btn-default btn-xs">Edit</button>
+                <button type="button" name="button" class="btn btn-default btn-xs">Align</button>
+                <button type="button" name="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-trash"></span></button>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+
+        <!-- This is another object in the learning feed -->
+        <div class="learning-object">
+          <div class="timestamp">
+            Monday, June 19, 2017
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-body object-content-wrapper">
+              <div class="object-icon">
+                <span class="glyphicon glyphicon-th-list"></span>
+              </div>
+              <div class="object-text">
+                <p><b>Focus: </b>To learn about myself in the context of Hayground camp</p>
+                <p><b>Action: </b>Action: 1. Watch myself work and question the way i do things. 2. Write an outcome before my next iris meeting.</p>
+                <p><b>Vision: </b>Vision: I was able to come up with a bunch of questions to help myself move forward this summer.
+                I hope to have a better sense of myself
+                I will have a better understanding of what motivates both me and my counselors.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- This is another object in the learning feed -->
+        <div class="learning-object">
+          <div class="timestamp">
+            Monday, June 19, 2017
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-body object-content-wrapper">
+              <div class="object-icon">
+                <span class="glyphicon glyphicon-eye-open"></span>
+              </div>
+              <div class="object-text">
+                <p>What I Did: I went back through my iris again (after the first time I went through it again after a long time).  I approached making changes with a new mindset and adjusted accordingly.  <br> What I Learned:  I think when I went through the iris a way ago and adjusted my capabilities, I was pretty conservative.  When I went back through it a few weeks ago, I was thinking about the capabilities and how I've improved over the past year but didn't really focus on what the different ratings meant.  When talking about the iris with Nick when he was re-aligning his capabilities, I realized that I may have been thinking about it the wrong way.  I learned that while I have definitely made improvements and have grown, I still have a lot of work to do and have plenty of room for improvement on numerous areas of the iris.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- This is another object in the learning feed -->
+        <div class="learning-object">
+          <div class="timestamp">
+            Monday, June 19, 2017
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-body object-content-wrapper">
+              <div class="object-icon">
+                <span class="glyphicon glyphicon-th-list"></span>
+              </div>
+              <div class="object-text">
+                <p><b>Focus: </b>To learn about myself in the context of Hayground camp</p>
+                <p><b>Action: </b>Action: 1. Watch myself work and question the way i do things. 2. Write an outcome before my next iris meeting.</p>
+                <p><b>Vision: </b>Vision: I was able to come up with a bunch of questions to help myself move forward this summer.
+                I hope to have a better sense of myself
+                I will have a better understanding of what motivates both me and my counselors.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- This is another object in the learning feed -->
+        <div class="learning-object">
+          <div class="timestamp">
+            Monday, June 19, 2017
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-body object-content-wrapper">
+              <div class="object-icon">
+                <span class="glyphicon glyphicon-th-list"></span>
+              </div>
+              <div class="object-text">
+                <p><b>Focus: </b>To learn about myself in the context of Hayground camp</p>
+                <p><b>Action: </b>Action: 1. Watch myself work and question the way i do things. 2. Write an outcome before my next iris meeting.</p>
+                <p><b>Vision: </b>Vision: I was able to come up with a bunch of questions to help myself move forward this summer.
+                I hope to have a better sense of myself
+                I will have a better understanding of what motivates both me and my counselors.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- This is another object in the learning feed -->
+        <div class="learning-object">
+          <div class="timestamp">
+            Monday, June 19, 2017
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-body object-content-wrapper">
+              <div class="object-icon">
+                <span class="glyphicon glyphicon-th-list"></span>
+              </div>
+              <div class="object-text">
+                <p><b>Focus: </b>To learn about myself in the context of Hayground camp</p>
+                <p><b>Action: </b>Action: 1. Watch myself work and question the way i do things. 2. Write an outcome before my next iris meeting.</p>
+                <p><b>Vision: </b>Vision: I was able to come up with a bunch of questions to help myself move forward this summer.
+                I hope to have a better sense of myself
+                I will have a better understanding of what motivates both me and my counselors.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+
+
+</body>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<!-- My JavaScript stuff -->
+<link rel="javascript" href="js/main.js">
+<script type="text/javascript">
+  function toggleWindow() {
+    let windowDisplay = document.getElementById('window');
+    console.log("The current value of windowDisplay is " + windowDisplay.style.display);
+    if (windowDisplay.style.display === 'none') {
+      windowDisplay.style.display = 'inline';
+    } else {
+      windowDisplay.style.display = 'none';
+    }
+    console.log("Just tried to toggle the window.")
+  };
+  function alertCheck() {
+    alert("This is working!");
+  }
+</script>
+</html>

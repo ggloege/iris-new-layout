@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700');
+
+html, body {
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+.main-container {
+  display: flex;
+  height: 100%;
+  /*border: 1px dashed black;*/
+  flex-direction: row;
+  /*flex-wrap: nowrap;*/
+  overflow: scroll;
+  justify-content: space-around;
+}
+
+/*Stuff in the iris window*/
+.iris {
+  flex-grow: 7;
+  /*display: flex;
+  flex-flow: column;*/
+  /*background-color: lightblue;*/
+}
+
+.iris-display {
+  /*display: block;*/
+  width: 300px;
+  text-align: center;
+  margin: 10px auto;
+  max-height: 80px;
+  padding: 15px;
+}
+
+.iris-display h4, p {
+  margin: 0;
+}
+
+.border {
+  border: 1px dotted red;
+}
+
+.iris-image {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 20px;
+  /*height: 100%;*/
+}
+
+.iris-picker {
+  display: block;
+  text-align: center;
+  margin: 10px auto 50px;
+}
+
+
+/*Stuff in the learning feed*/
+
+#window {
+  /*display: none;*/
+  flex-grow: 3;
+  /*background-color: lightgreen;*/
+  max-width: 30%;
+  border-left: 2px solid gray;
+  overflow: scroll;
+  min-width: 380px;
+  padding: 10px;
+}
+
+
+.filter-wrapper {
+  display: flex;
+  justify-content: space-between;
+  /*margin-top: 15px;*/
+}
+
+.filter-wrapper div {
+  padding: 0 5px;
+  flex-grow: 1;
+  /*width: 80px;*/
+}
+
+.filter-wrapper select {
+  width: 100%;
+}
+
+.filter-wrapper button {
+  width: 100%;
+  /*background-color: none;*/
+}
+
+.object-menu {
+  display: flex;
+  /*border: 1px dotted black;*/
+  overflow: scroll;
+  padding: 10px 0px;
+}
+
+.object-menu a {
+  color:inherit;
+  text-decoration: none;
+}
+
+.object-type {
+  text-transform: uppercase;
+  margin: 0 10px;
+  font-size: .8em;
+  color: gray;
+  font-weight: 300;
+}
+
+.object-type:hover {
+  font-weight: 400;
+}
+
+.object-type-active {
+  color: blue;
+  font-weight: 700;
+}
+
+.object-search {
+  display: block;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.object-list {
+  padding: 0 5px;
+  /*overflow: scroll;*/
+}
+
+.learning-object {
+  margin: 0px 0 40px;
+}
+
+.object-icon {
+  flex-grow: 1;
+  margin-right: 10px;
+}
+
+.object-text {
+  flex-grow: 9;
+  font-size: .9em;
+  max-height: 100px;
+  overflow: hidden;
+}
+
+.object-content-wrapper {
+  display: flex;
+}
+
+.object {
+  border: 1px solid gray;
+  padding: 10px;
+  border-radius: 7px;
+  margin: 7px 0;
+}
+
+.object-active {
+  box-shadow: 0 0 7px lightblue;
+}
+
+.button-row {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+}
+
+.button-row button {
+  margin: 0 5px;
+}
+
+.window-switch {
+  float: right;
+  margin-top: 25%;
+}
+.window-switch img {
+    max-width: 50px;
+}
+
+.timestamp {
+  font-size: .7em;
+  color: lightgray;
+}
+.card-holder {
+  margin: 20px 0;
+}

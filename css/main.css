@@ -60,7 +60,7 @@ html, body {
 /*Stuff in the learning feed*/
 
 #window {
-  /*display: none;*/
+  display: none;
   flex-grow: 3;
   /*background-color: lightgreen;*/
   max-width: 30%;
@@ -121,8 +121,8 @@ html, body {
   font-weight: 700;
 }
 
-.object-search {
-  display: block;
+#object-search {
+  display: none;
   padding: 10px 0;
   width: 100%;
 }
@@ -133,7 +133,7 @@ html, body {
 }
 
 .learning-object {
-  margin: 0px 0 40px;
+  margin: 10px 0 30px;
 }
 
 .object-icon {
@@ -184,6 +184,7 @@ html, body {
 .timestamp {
   font-size: .7em;
   color: lightgray;
+  margin-bottom: 5px;
 }
 .card-holder {
   margin: 20px 0;

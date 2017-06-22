@@ -40,18 +40,18 @@
     </div>
 
     <div id="window">
-      <h4>Your Learning Feed</h4>
+      <!-- <h4>Your Learning Feed</h4> -->
       <div class="filter-wrapper">
         <div class="filter">
           <div class="dropdown">
-            <button class="btn btn-primary btn-sm dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            <button class="btn btn-default btn-sm dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
               Type
               <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
               <li><a href="#">All objects</a></li>
               <li><a href="#">Commits</a></li>
-              <li><a href="#">Reflections</a></li>
+              <li><a href="#" onclick=alertCheck()>Reflections</a></li>
               <li><a href="#">Resources</a></li>
               <li><a href="#">Iris adjustments</a></li>
               <li><a href="#">Highlights</a></li>
@@ -89,13 +89,13 @@
             </ul>
           </div>
         </div>
-        <button type="button" class="btn btn-default btn-sm" aria-label="Search" style="width: 40px">
+        <button type="button" class="btn btn-default btn-sm" aria-label="Search" onclick=toggleSearch() style="width: 40px">
           <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
         </button>
       </div>
 
       <!-- Search the learning feed -->
-      <div class="object-search">
+      <div id="object-search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="Search your learning feed">
         </div>
@@ -122,7 +122,7 @@
               <div class="button-row">
                 <button type="button" name="button" class="btn btn-default btn-xs">Edit</button>
                 <button type="button" name="button" class="btn btn-default btn-xs">Align</button>
-                <button type="button" name="button" class="btn btn-default btn-xs"><span class="glyphicon glyphicon-trash"></span></button>
+                <button type="button" name="button" class="btn btn-default btn-xs btn-danger" onclick=doubleAlert()><span class="glyphicon glyphicon-trash"></span></button>
               </div>
 
             </div>
@@ -245,20 +245,5 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 <!-- My JavaScript stuff -->
-<link rel="javascript" href="js/main.js">
-<script type="text/javascript">
-  function toggleWindow() {
-    let windowDisplay = document.getElementById('window');
-    console.log("The current value of windowDisplay is " + windowDisplay.style.display);
-    if (windowDisplay.style.display === 'none') {
-      windowDisplay.style.display = 'inline';
-    } else {
-      windowDisplay.style.display = 'none';
-    }
-    console.log("Just tried to toggle the window.")
-  };
-  function alertCheck() {
-    alert("This is working!");
-  }
-</script>
+<script type="text/javascript" src="js/main.js"></script>
 </html>

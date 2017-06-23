@@ -49,12 +49,12 @@
               <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-              <li><a href="#">All objects</a></li>
-              <li><a href="#">Commits</a></li>
-              <li><a href="#" onclick=alertCheck()>Reflections</a></li>
-              <li><a href="#">Resources</a></li>
-              <li><a href="#">Iris adjustments</a></li>
-              <li><a href="#">Highlights</a></li>
+              <li><a href="#" id="filter-all-objects" onclick=showFeed()>All objects</a></li>
+              <li><a href="#" id="filter-commits">Commits</a></li>
+              <li><a href="#" id="filter-reflections" onclick=showFilteredFeed("reflection")>Reflections</a></li>
+              <li><a href="#" id="filter-resources">Resources</a></li>
+              <li><a href="#" id="filter-iris-ajustments">Iris adjustments</a></li>
+              <li><a href="#" id="filter-highlights">Highlights</a></li>
             </ul>
           </div>
         </div>
@@ -82,9 +82,9 @@
               <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-              <li><a href="#">Just me</a></li>
-              <li><a href="#">My team</a></li>
-              <li><a href="#">My department</a></li>
+              <li><a href="#" onclick=hideFeed()>Just me</a></li>
+              <li><a href="#" onclick=showFilteredFeed()>My team</a></li>
+              <li><a href="#" onclick=showFeed()>My department</a></li>
               <li><a href="#">My company</a></li>
             </ul>
           </div>
@@ -104,8 +104,8 @@
       <!-- Begin actual learning feed -->
       <div class="object-list">
 
-        <!-- This is another object in the learning feed -->
-        <div class="learning-object">
+        <!-- This is an object in the learning feed -->
+        <div class="learning-object reflection">
           <div class="timestamp">
             Monday, June 19, 2017
           </div>
@@ -131,7 +131,7 @@
         </div>
 
         <!-- This is another object in the learning feed -->
-        <div class="learning-object">
+        <div class="learning-object commit">
           <div class="timestamp">
             Monday, June 19, 2017
           </div>
@@ -152,7 +152,7 @@
         </div>
 
         <!-- This is another object in the learning feed -->
-        <div class="learning-object">
+        <div class="learning-object reflection">
           <div class="timestamp">
             Monday, June 19, 2017
           </div>
@@ -169,7 +169,7 @@
         </div>
 
         <!-- This is another object in the learning feed -->
-        <div class="learning-object">
+        <div class="learning-object commit">
           <div class="timestamp">
             Monday, June 19, 2017
           </div>
@@ -190,7 +190,7 @@
         </div>
 
         <!-- This is another object in the learning feed -->
-        <div class="learning-object">
+        <div class="learning-object commit">
           <div class="timestamp">
             Monday, June 19, 2017
           </div>
@@ -211,7 +211,7 @@
         </div>
 
         <!-- This is another object in the learning feed -->
-        <div class="learning-object">
+        <div class="learning-object commit">
           <div class="timestamp">
             Monday, June 19, 2017
           </div>

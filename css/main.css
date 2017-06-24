@@ -169,6 +169,10 @@ html, body {
   margin-top: 10px;
 }
 
+.btn {
+  background-image: none;
+}
+
 .button-row button {
   margin: 0 5px;
 }

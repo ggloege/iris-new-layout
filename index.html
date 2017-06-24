@@ -50,11 +50,11 @@
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
               <li><a href="#" id="filter-all-objects" onclick=showFeed()>All objects</a></li>
-              <li><a href="#" id="filter-commits">Commits</a></li>
+              <li><a href="#" id="filter-commits" onclick=showFilteredFeed("commit")>Commits</a></li>
               <li><a href="#" id="filter-reflections" onclick=showFilteredFeed("reflection")>Reflections</a></li>
-              <li><a href="#" id="filter-resources">Resources</a></li>
-              <li><a href="#" id="filter-iris-ajustments">Iris adjustments</a></li>
-              <li><a href="#" id="filter-highlights">Highlights</a></li>
+              <li><a href="#" id="filter-resources" onclick=showFilteredFeed("resource")>Resources</a></li>
+              <li><a href="#" id="filter-iris-ajustments" onclick="fireAlert('Adjustments are the times you have adjusted rays on your iris. This object will somehow show you which rays were adjusted, by how much, and in which direction.')">Iris adjustments</a></li>
+              <li><a href="#" id="filter-highlights" onclick="fireAlert('This will show only those learning objects that you have starred/favorited.')">Highlights</a></li>
             </ul>
           </div>
         </div>
@@ -66,8 +66,8 @@
               <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-              <li><a href="#">All time</a></li>
-              <li><a href="#">Last 7 days</a></li>
+              <li><a href="#" onclick="fireAlert('This is the default showing every learning object you\'ve created since you created your account.')">All time</a></li>
+              <li><a href="#" onclick="fireAlert('This should be pretty self-explanatory by now, right?')">Last 7 days</a></li>
               <li><a href="#">Last 30 days</a></li>
               <li><a href="#">Last 90 days</a></li>
               <li><a href="#">Last 6 months</a></li>
@@ -82,10 +82,10 @@
               <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-              <li><a href="#" onclick=hideFeed()>Just me</a></li>
-              <li><a href="#" onclick=showFilteredFeed()>My team</a></li>
-              <li><a href="#" onclick=showFeed()>My department</a></li>
-              <li><a href="#">My company</a></li>
+              <li><a href="#" onclick="fireAlert('This is the default setting showing only your own learning objects.')">Just me</a></li>
+              <li><a href="#" onclick="fireAlert('This will show the learning objects for everyone on your team.')">My team</a></li>
+              <li><a href="#" onclick="fireAlert('This will show all learning objects of everyone in your department')">My department</a></li>
+              <li><a href="#" onclick="fireAlert('This will show all learning objects of everyone in the entire company')">My company</a></li>
             </ul>
           </div>
         </div>
@@ -120,9 +120,9 @@
                 </div>
               </div>
               <div class="button-row">
-                <button type="button" name="button" class="btn btn-default btn-xs">Edit</button>
-                <button type="button" name="button" class="btn btn-default btn-xs">Align</button>
-                <button type="button" name="button" class="btn btn-default btn-xs btn-danger" onclick=doubleAlert()><span class="glyphicon glyphicon-trash"></span></button>
+                <button type="button" name="button" class="btn btn-default btn-xs" onclick="alert('Open the object in a modal window for editing, just like during creation. Not actually sure this is necessary?')">Edit</button>
+                <button type="button" name="button" class="btn btn-default btn-xs" onclick="alert('Go into selfie mode for aligning to an iris.')">Align</button>
+                <button type="button" name="button" class="btn btn-default btn-xs btn-danger" onclick="alert('Are you sure you want to archive this learning object?')"><span class="glyphicon glyphicon-inbox"></span></button>
               </div>
 
             </div>
@@ -211,7 +211,7 @@
         </div>
 
         <!-- This is another object in the learning feed -->
-        <div class="learning-object commit">
+        <div class="learning-object resource">
           <div class="timestamp">
             Monday, June 19, 2017
           </div>
@@ -221,11 +221,8 @@
                 <span class="glyphicon glyphicon-th-list"></span>
               </div>
               <div class="object-text">
-                <p><b>Focus: </b>To learn about myself in the context of Hayground camp</p>
-                <p><b>Action: </b>Action: 1. Watch myself work and question the way i do things. 2. Write an outcome before my next iris meeting.</p>
-                <p><b>Vision: </b>Vision: I was able to come up with a bunch of questions to help myself move forward this summer.
-                I hope to have a better sense of myself
-                I will have a better understanding of what motivates both me and my counselors.</p>
+                <p>This is a great video for understanding persuasion better. Check it out!</p>
+                <p><a href="https://youtu.be/dQw4w9WgXcQ" target="_blank">View resource</a></p>
               </div>
             </div>
           </div>

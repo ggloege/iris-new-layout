@@ -15,8 +15,8 @@ function toggleSearch() {
   console.log("Just tried to toggle the search bar.");
 };
 
-function dangerAlert() {
-  alert("This will destroy this learning object forever. You sure you want to do that?");
+function fireAlert(message) {
+  alert(message);
 };
 
 function doubleAlert() {
@@ -42,12 +42,10 @@ function showFeed() {
 
 
 function showFilteredFeed(objectType) {
-  let feed = document.getElementsByClassName('learning-object');
-  console.log(feed);
+  hideFeed();
+  let feed = document.getElementsByClassName(objectType);
+  // console.log(feed);
   for (var i = 0; i < feed.length; i++) {
-    console.log(feed[i]);
-    if (feed[i].className === objectType) {
-      feed[i].style.display = 'block';
-    }
+    feed[i].style.display = 'block';
   }
 }

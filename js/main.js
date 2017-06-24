@@ -40,7 +40,6 @@ function showFeed() {
   };
 }
 
-
 function showFilteredFeed(objectType) {
   hideFeed();
   let feed = document.getElementsByClassName(objectType);
@@ -48,4 +47,9 @@ function showFilteredFeed(objectType) {
   for (var i = 0; i < feed.length; i++) {
     feed[i].style.display = 'block';
   }
+}
+
+function destroyFeed() {
+  let x = document.getElementsByClassName("object-list");
+  x.innerHTML = "";
 }

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="result">There should be a list of dates here</div>
+    <button type="button" name="button" onclick="dateList(sortedArray)">Sort Dates</button>
+  </body>
+  <script src="js/date-list.json"></script>
+  <script type="text/javascript">
+    var sortedArray = myArray.sort(function(a, b) {
+        a = new Date(a.date);
+        b = new Date(b.date);
+        return a>b ? -1 : a<b ? 1 : 0;
+    });
+
+    function dateList(someArray) {
+      let results = document.getElementById("result");
+      results.innerHTML = "";
+      console.log(results)
+      for (var i = 0; i < someArray.length; i++) {
+        // console.log(someArray[i].date);
+        let x = document.createElement("p");
+        x.innerHTML = someArray[i].date;
+        // console.log("Loop #" + (i+1) + x);
+        results.appendChild(x);
+      }
+    }
+    
+  </script>
+</html>

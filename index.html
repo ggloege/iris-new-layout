@@ -50,7 +50,7 @@
               <span class="caret"></span>
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-              <li><a href="#" id="filter-all-objects" onclick=showFeed()>All objects</a></li>
+              <li><a href="#" id="filter-all-objects" onclick=buildFeed(sortedArray)>All objects</a></li>
               <li><a href="#" id="filter-commits" onclick=showFilteredFeed("commit")>Commits</a></li>
               <li><a href="#" id="filter-reflections" onclick=showFilteredFeed("reflection")>Reflections</a></li>
               <li><a href="#" id="filter-resources" onclick=showFilteredFeed("resource")>Resources</a></li>
@@ -121,6 +121,6 @@
 
 <script type="text/javascript" src="js/main.js"></script>
 <script type="text/javascript">
-  window.onload = buildFeed(myObject);
+  window.onload = buildFeed(sortedArray);
 </script>
 </html>

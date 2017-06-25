@@ -18,7 +18,17 @@ function destroyFeed() {
 }
 
 function filterFeedByType(type) {
-  //builds new array from original feed based on type attribute, returns array
+  let newArray = [];
+  for (var i in myObject) {
+    if (myObject[i].type == type) {
+      newArray.push(myObject[i]);
+    }
+  }
+  return newArray;
+}
+
+function showFilteredFeed(type) {
+  buildFeed(filterFeedByType(type));
 }
 
 function buildFeed(feedArray) {
@@ -61,9 +71,24 @@ function buildObjectIcon(type) {
   let newObjectIcon = document.createElement("div");
   newObjectIcon.className = "object-icon";
   let newGlyph = document.createElement("span");
-  newGlyph.className = "glyphicon glyphicon-th-list"; //replate with switch to select glyph type
+  newGlyph.className = chooseGlyph(type);
+  // newGlyph.className = "glyphicon glyphicon-th-list"; //replate with switch to select glyph type
   newObjectIcon.appendChild(newGlyph);
   return newObjectIcon;
+}
+
+function chooseGlyph(type) {
+  switch (type) {
+    case "reflection":
+      return "glyphicon glyphicon-eye-open";
+    case "commit":
+      return "glyphicon glyphicon-th-list";
+    case "resource":
+      return "glyphicon glyphicon-book";
+    default:
+      console.log("This isn't an object type I've seen before. Can't find associated glyph.");
+
+  }
 }
 
 function buildObjectContent(content) {

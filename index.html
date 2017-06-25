@@ -30,7 +30,7 @@
       </div>
       <div class="iris-picker">
         <p>You're viewing the iris for: <span>
-          <select class="dropdown" name="iris-picker">
+          <select class="dropdown" na me="iris-picker">
             <option value="">Workforce Genome</option>
             <option value="">Account Executive</option>
             <option value="">Account Services Team</option>
@@ -54,8 +54,8 @@
               <li><a href="#" id="filter-commits" onclick=showFilteredFeed("commit")>Commits</a></li>
               <li><a href="#" id="filter-reflections" onclick=showFilteredFeed("reflection")>Reflections</a></li>
               <li><a href="#" id="filter-resources" onclick=showFilteredFeed("resource")>Resources</a></li>
-              <li><a href="#" id="filter-iris-ajustments" onclick="fireAlert('Adjustments are the times you have adjusted rays on your iris. This object will somehow show you which rays were adjusted, by how much, and in which direction.')">Iris adjustments</a></li>
-              <li><a href="#" id="filter-highlights" onclick="fireAlert('This will show only those learning objects that you have starred/favorited.')">Highlights</a></li>
+              <li><a href="#" id="filter-iris-ajustments" onclick="alert('Adjustments are the times you have adjusted rays on your iris. This object will somehow show you which rays were adjusted, by how much, and in which direction.')">Iris adjustments</a></li>
+              <li><a href="#" id="filter-highlights" onclick="alert('This will show only those learning objects that you have starred/favorited.')">Highlights</a></li>
             </ul>
           </div>
         </div>
@@ -247,4 +247,7 @@
 <script src="js/fake-data.json"></script>
 
 <script type="text/javascript" src="js/main.js"></script>
+<script type="text/javascript">
+  window.onload = buildFeed(myObject);
+</script>
 </html>

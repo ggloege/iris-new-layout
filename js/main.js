@@ -1,10 +1,3 @@
-var sortedArray = myObject.sort(function(a, b) {
-    a = new Date(a.created);
-    b = new Date(b.created);
-    return a>b ? -1 : a<b ? 1 : 0;
-});
-
-
 function toggleWindow() {
   let windowDisplay = document.getElementById('window');
   console.log(windowDisplay.style.display);

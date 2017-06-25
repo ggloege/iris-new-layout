@@ -60,7 +60,7 @@ html, body {
 /*Stuff in the learning feed*/
 
 #window {
-  display: none;
+  display: inline;
   flex-grow: 3;
   /*background-color: lightgreen;*/
   max-width: 30%;
@@ -127,7 +127,7 @@ html, body {
   width: 100%;
 }
 
-.object-list {
+#learning-feed {
   padding: 0 5px;
   /*overflow: scroll;*/
 }
@@ -192,4 +192,21 @@ html, body {
 }
 .card-holder {
   margin: 20px 0;
+}
+
+.object-card {
+  border: 1px solid lightgray;
+  border-radius: 3px;
+  box-shadow: 0 1px 2px black;
+  padding: 10px;
+  margin: 25px 0;
+  width: 400px;
+  max-height: 200px;
+  overflow: hidden;
+}
+.card-date {
+  color: gray;
+  text-align: right;
+  font-size: .8em;
+  font-weight: 300;
 }

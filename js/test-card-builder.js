@@ -1,36 +1,3 @@
-function toggleWindow() {
-  let windowDisplay = document.getElementById('window');
-  console.log(windowDisplay.style.display);
-  windowDisplay.style.display === 'inline' ? windowDisplay.style.display = 'none' : windowDisplay.style.display = 'inline';
-  console.log("Just tried to toggle the window.");
-};
-
-function toggleSearch() {
-  let searchBar = document.getElementById('object-search');
-  searchBar.style.display === 'block' ? searchBar.style.display = 'none' : searchBar.style.display = 'block';
-  console.log("Just tried to toggle the search bar.");
-};
-
-function destroyFeed() {
-  let x = document.getElementById("learning-feed");
-  x.innerHTML = "";
-  console.log("Feed destroyed!!");
-}
-
-function filterFeedByType(type) {
-  //builds new array from original feed based on type attribute, returns array
-}
-
-function buildFeed(feedArray) {
-  destroyFeed();
-  console.log("Attempting to build feed.");
-  let feedBox = document.getElementById("learning-feed");
-  for (var i = 0; i < feedArray.length; i++) {
-    let x = buildLearningObject(feedArray[i]);
-    feedBox.appendChild(x);
-  }
-}
-
 function buildLearningObject(object) {
   let newLearningObject = document.createElement("div");
   newLearningObject.className = "learning-object";
@@ -47,9 +14,9 @@ function buildTimestamp(timestamp) {
 }
 
 function buildPanel(object) {
-  let newPanel = document.createElement("div");
+  let newPanel = object.createElement("div");
   newPanel.className = "panel panel-default";
-  let newPanelBody = document.createElement("div");
+  let newPanelBody = object.createElement("div");
   newPanelBody.className = "panel-body object-content-wrapper";
   newPanelBody.appendChild(buildObjectIcon(object.type));
   newPanelBody.appendChild(buildObjectContent(object.content));

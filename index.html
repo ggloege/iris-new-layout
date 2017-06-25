@@ -36,7 +36,7 @@
             <option value="">Account Services Team</option>
           </select>
         </span></p>
-        <button type="button" name="button" class="btn btn-primary" onclick="destroyFeed()">Push Me</button>
+        <button type="button" name="button" class="btn btn-primary" onclick="buildFeed(myObject)">Push Me</button>
       </div>
     </div>
 
@@ -103,7 +103,7 @@
       </div>
 
       <!-- Begin actual learning feed -->
-      <div class="object-list">
+      <div id="learning-feed">
 
         <!-- This is an object in the learning feed -->
         <div class="learning-object reflection">
@@ -242,6 +242,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-<!-- My JavaScript stuff -->
+
+<!-- Import local DB -->
+<script src="js/fake-data.json"></script>
+
 <script type="text/javascript" src="js/main.js"></script>
 </html>
